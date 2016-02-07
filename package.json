@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-lob",
+  "version": "0.0.1",
+  "description": "Custom ESLint rules for Lob repositories",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lob/eslint-plugin-lob.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "test": "istanbul cover _mocha -- test --recursive",
+    "test:raw": "mocha test --recursive"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-lob": "^1.1.0",
+    "generate-changelog": "^1.0.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "license": "MIT"
+}
