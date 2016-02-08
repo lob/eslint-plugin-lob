@@ -1,5 +1,8 @@
 # eslint-plugin-lob
 
+[![Build Status](https://travis-ci.org/lob/eslint-plugin-lob.svg?branch=master)](https://travis-ci.org/lob/eslint-plugin-lob)
+[![Coverage Status](https://coveralls.io/repos/github/lob/eslint-plugin-lob/badge.svg?branch=master)](https://coveralls.io/github/lob/eslint-plugin-lob?branch=master)
+
 Custom ESLint rules for Lob repositories
 
 ## Installation
@@ -39,6 +42,10 @@ Then configure the rules you want to use under the rules section.
   }
 }
 ```
+
+## Supported Rules
+
+* `padded-describes` - `describe` blocks must be padded by blank lines
 
 ## Testing
 
