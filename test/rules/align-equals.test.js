@@ -38,6 +38,11 @@ Tester.run('align-equals', Rule, {
     'let ab = Factory.build("ab");\nlet b  = Factory.build("b");',
     'let a  = Factory.build("a");\nlet ab = Factory.build("ab");',
     'let a = Factory.build("a");\n\nlet ab = Factory.build("ab");',
+    'let a = NamedFactory.build();',
+    'let a = NamedFactory.build();\nlet b = NamedFactory.build();',
+    'let ab = NamedFactory.build();\nlet b  = NamedFactory.build();',
+    'let a  = NamedFactory.build();\nlet ab = NamedFactory.build();',
+    'let a = NamedFactory.build();\n\nlet ab = NamedFactory.build();',
     'let a = "a";\nlet ab = "ab";'
   ],
   invalid: [{
@@ -272,22 +277,61 @@ Tester.run('align-equals', Rule, {
     code: 'let a  = Factory.build("a");\nlet b = Factory.build("b");',
     errors: [{ message: 'Extra space before equals for variable \'a\'.', line: 1 }]
   }, {
-    code: 'let a  = Factory.build("a");\nlet b  = Factory.build("b");',
+    code: 'let a  = NamedFactory.build();\nlet b  = NamedFactory.build();',
     errors: [
       { message: 'Extra space before equals for variable \'a\'.', line: 1 },
       { message: 'Extra space before equals for variable \'b\'.', line: 2 }
     ]
   }, {
-    code: 'let a = Factory.build("a");\nlet b  = Factory.build("b");',
+    code: 'let a = NamedFactory.build();\nlet b  = NamedFactory.build();',
     errors: [{ message: 'Extra space before equals for variable \'b\'.', line: 2 }]
   }, {
-    code: 'let ab = Factory.build("ab");\nlet b = Factory.build("b");',
+    code: 'let ab = NamedFactory.build();\nlet b = NamedFactory.build();',
     errors: [{ message: 'Missing space before equals for variable \'b\'.', line: 2 }]
   }, {
-    code: 'let ab = Factory.build("ab");\nlet b  = Factory.build("b");\n\nlet c  = Factory.build("c");',
+    code: 'let ab = NamedFactory.build();\nlet b  = NamedFactory.build();\n\nlet c  = NamedFactory.build();',
     errors: [{ message: 'Extra space before equals for variable \'c\'.', line: 4 }]
   }, {
-    code: 'let ab = "ab";\nlet b = "b";\n\nlet c  = Factory.build("c");',
+    code: 'let ab = "ab";\nlet b = "b";\n\nlet c  = NamedFactory.build();',
+    errors: [{ message: 'Extra space before equals for variable \'c\'.', line: 4 }]
+  }, {
+    code: 'let a  = NamedFactory.build();',
+    errors: [{ message: 'Extra space before equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a   = NamedFactory.build();',
+    errors: [{ message: 'Extra spaces before equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a= NamedFactory.build();',
+    errors: [{ message: 'Missing space before equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a =  NamedFactory.build();',
+    errors: [{ message: 'Extra space after equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a =   NamedFactory.build();',
+    errors: [{ message: 'Extra spaces after equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a =NamedFactory.build();',
+    errors: [{ message: 'Missing space after equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a  = NamedFactory.build();\nlet b = NamedFactory.build();',
+    errors: [{ message: 'Extra space before equals for variable \'a\'.', line: 1 }]
+  }, {
+    code: 'let a  = NamedFactory.build();\nlet b  = NamedFactory.build();',
+    errors: [
+      { message: 'Extra space before equals for variable \'a\'.', line: 1 },
+      { message: 'Extra space before equals for variable \'b\'.', line: 2 }
+    ]
+  }, {
+    code: 'let a = NamedFactory.build();\nlet b  = NamedFactory.build();',
+    errors: [{ message: 'Extra space before equals for variable \'b\'.', line: 2 }]
+  }, {
+    code: 'let ab = NamedFactory.build();\nlet b = NamedFactory.build();',
+    errors: [{ message: 'Missing space before equals for variable \'b\'.', line: 2 }]
+  }, {
+    code: 'let ab = NamedFactory.build();\nlet b  = NamedFactory.build();\n\nlet c  = NamedFactory.build();',
+    errors: [{ message: 'Extra space before equals for variable \'c\'.', line: 4 }]
+  }, {
+    code: 'let ab = "ab";\nlet b = "b";\n\nlet c  = NamedFactory.build();',
     errors: [{ message: 'Extra space before equals for variable \'c\'.', line: 4 }]
   }]
 });
