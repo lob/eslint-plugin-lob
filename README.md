@@ -45,7 +45,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* `align-equals` - equal signs of variable declarations involving `require` or `Factory.build` must be aligned
+* `align-equals` - equal signs of variable declarations involving `require`, `Factory.build`, `Bluebird.promisify`, or `Bluebird.promisifyAll` must be aligned
 * `newline-after-mocha` - new lines must be between mocha blocks (`describe`, `it`, `beforeEach`, etc)
 * `padded-describes` - `describe` blocks must be padded by blank lines
 
