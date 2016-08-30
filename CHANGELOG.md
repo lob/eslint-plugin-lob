@@ -1,3 +1,16 @@
+#### 1.0.1 (2016-8-30)
+
+##### Chores
+
+* **deps:** make eslint v1.x a peer dep ([7c8927e7](https://github.com/lob/eslint-plugin-lob/commit/7c8927e7))
+* **npm:** ignore the coverage directory ([b444ab55](https://github.com/lob/eslint-plugin-lob/commit/b444ab55))
+
+##### Bug Fixes
+
+* **align-equals:**
+  * align named factories as well ([44228d11](https://github.com/lob/eslint-plugin-lob/commit/44228d11))
+  * account for promisification when aligning ([256dadc8](https://github.com/lob/eslint-plugin-lob/commit/256dadc8))
+
 ## 1.0.0 (2016-2-15)
 
 ##### Chores
