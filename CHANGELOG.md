@@ -1,3 +1,9 @@
+### 1.1.0 (2017-5-29)
+
+##### New Features
+
+* **eslint:** loosen eslint peer dependency ([e9efa55a](https://github.com/lob/eslint-plugin-lob/commit/e9efa55a378f1c25655c962ae0d7cfbb7b440e20))
+
 #### 1.0.1 (2016-8-30)
 
 ##### Chores
