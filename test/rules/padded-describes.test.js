@@ -1,13 +1,13 @@
 'use strict';
 
-const RuleTester = require('eslint').RuleTester;
+var RuleTester = require('eslint').RuleTester;
 
-const Rule = require('../../lib/rules/padded-describes');
+var Rule = require('../../lib/rules/padded-describes');
 
-const Tester = new RuleTester({ ecmaFeatures: { arrowFunctions: true } });
+var Tester = new RuleTester({ ecmaFeatures: { arrowFunctions: true } });
 
-const TOP_ERROR_MESSAGE    = 'Missing new line at the top of a describe block.';
-const BOTTOM_ERROR_MESSAGE = 'Missing new line at the bottom of a describe block.';
+var TOP_ERROR_MESSAGE    = 'Missing new line at the top of a describe block.';
+var BOTTOM_ERROR_MESSAGE = 'Missing new line at the bottom of a describe block.';
 
 Tester.run('padded-describes', Rule, {
   valid: [

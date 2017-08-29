@@ -1,10 +1,10 @@
 'use strict';
 
-const RuleTester = require('eslint').RuleTester;
+var RuleTester = require('eslint').RuleTester;
 
-const Rule = require('../../lib/rules/align-equals');
+var Rule = require('../../lib/rules/align-equals');
 
-const Tester = new RuleTester({ ecmaFeatures: { blockBindings: true } });
+var Tester = new RuleTester({ ecmaFeatures: { blockBindings: true } });
 
 Tester.run('align-equals', Rule, {
   valid: [

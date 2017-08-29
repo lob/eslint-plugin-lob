@@ -1,12 +1,12 @@
 'use strict';
 
-const RuleTester = require('eslint').RuleTester;
+var RuleTester = require('eslint').RuleTester;
 
-const Rule = require('../../lib/rules/newline-after-mocha');
+var Rule = require('../../lib/rules/newline-after-mocha');
 
-const Tester = new RuleTester({ ecmaFeatures: { arrowFunctions: true } });
+var Tester = new RuleTester({ ecmaFeatures: { arrowFunctions: true } });
 
-const ERROR_MESSAGE = 'It and describe blocks must be separated by new lines.';
+var ERROR_MESSAGE = 'It and describe blocks must be separated by new lines.';
 
 Tester.run('newline-after-mocha', Rule, {
   valid: [
