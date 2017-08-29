@@ -1,3 +1,9 @@
+### 1.2.0 (2017-08-29)
+
+##### Refactors
+
+* **node:** support node < v4 (#10) ([0d7d979d](https://github.com/lob/eslint-plugin-lob/commit/0d7d979d13be6750bd536c714c632307f70f8115))
+
 ### 1.1.0 (2017-5-29)
 
 ##### New Features
