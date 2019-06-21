@@ -24,7 +24,7 @@
   "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.11.6",
-    "eslint": "^1.10.3",
+    "eslint": "^4.18.2",
     "eslint-config-lob": "^2.0.0",
     "generate-changelog": "^1.0.0",
     "istanbul": "^0.4.2",
